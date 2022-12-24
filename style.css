@@ -1,0 +1,116 @@
+html {
+    background-color: rgb(168, 102, 64);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+    
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin: 1%;
+    width: 1200px;
+    flex-direction: row;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 10px;
+    border: 0.1px solid #00a2ff;
+    background-color: #000000;
+    box-shadow: 0 4px 8px 0 #00a2ff, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ul {
+    margin: 1%;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 10px;
+    border: 0.1px solid #00a2ff;
+    background-color: #000000;
+    box-shadow: 0 4px 8px 0 #00a2ff, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+li {
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+li:after {
+    display: block;
+}
+
+
+button {
+    position: fixed;
+    bottom: 0;
+    border: none;
+    color: white;
+    width: 5em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient( 90deg, blue, rgb(255, 0, 43), rgb(30, 255, 0), blue ) ;
+    background-size: 300%;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button:hover {
+    animation: animation 10s linear infinite;
+    border: none;
+}
+
+@keyframes animation {
+    0% { background-position: 0%;}
+    100% { background-position: 200%;}
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient (
+        90deg, blue, pink, yellow, blue
+    );
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+
+
+.reveal {
+    position: relative;
+    transform: translateY(0);
+    opacity: 0;
+    transition: 1.5s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
